@@ -5,8 +5,7 @@ const ChatBox = ({ data, socket, username }) => {
   const [msgs, setMsgs] = useState(data);
 
   socket.on("message", (msg) => {
-    console.log(socket.id);
-    console.log(msg);
+    
     setMsgs((prevMsgs) => {
       if (prevMsgs.some((m) => m.id === msg.id)) {
         return prevMsgs;
@@ -26,7 +25,7 @@ const ChatBox = ({ data, socket, username }) => {
         text: textData,
         createdAt: d,
       };
-      console.log(msg);
+      
       socket.emit("message", msg, (err) => {
         if (err) {
           console.error(err);
