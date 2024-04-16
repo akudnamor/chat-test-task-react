@@ -1,6 +1,6 @@
 # Info
 
-This client is written using React.
+Chat-client. Config for local usage with local server on Go for default.
 
 # To be used
 
